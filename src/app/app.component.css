@@ -1,13 +1,69 @@
 /* Estilos generales */
 .informacion-container {
-  font-family: 'Arial', sans-serif;
-  padding: 20px;
-  background-color: #f4f4f4;
-  margin: 0 auto;
-  max-width: 800px;
-  border-radius: 8px;
-  padding-top: 80px; /* Para que no se oculte contenido debajo del navbar fijo */
+  background-image: url('../assets/images/bcp.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  color: #fff;
+  height: 100vh; /* Altura completa de la pantalla */
 }
+
+.informacion-header,
+.informacion-content,
+.informacion-footer {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Títulos y texto */
+.informacion-header h1,
+.informacion-content h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.informacion-header p,
+.informacion-content p {
+  font-size: 1.2em;
+}
+
+/* Botón de contacto */
+.contact-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .informacion-container {
+    padding: 20px;
+  }
+
+  .informacion-header h1 {
+    font-size: 1.5em;
+  }
+
+  .informacion-content h2 {
+    font-size: 1.3em;
+  }
+
+  .informacion-header p,
+  .informacion-content p {
+    font-size: 1em;
+  }
+}
+
 
 /* Navbar fijo */
 .navbar {
