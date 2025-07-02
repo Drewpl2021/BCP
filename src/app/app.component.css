@@ -1,48 +1,120 @@
 /* Estilos generales */
 .informacion-container {
-  background-image: url('../assets/images/bcp.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 40px 20px;
-  color: #fff;
-  height: 100vh; /* Altura completa de la pantalla */
-}
-
-.informacion-header,
-.informacion-content,
-.informacion-footer {
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  font-family: 'Arial', sans-serif;
   padding: 20px;
-  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  margin: 0 auto;
+  max-width: 800px;
   border-radius: 8px;
+  padding-top: 80px; /* Para que no se oculte contenido debajo del navbar fijo */
 }
 
-/* Títulos y texto */
-.informacion-header h1,
+/* Navbar fijo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  width: 50px; /* Tamaño de la imagen del logo */
+}
+
+.navbar-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li {
+  font-size: 1.1em;
+}
+
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #3498db;
+}
+
+/* Header */
+.informacion-header {
+  margin-top: 80px; /* Dejar espacio debajo del navbar fijo */
+  text-align: center;
+}
+
+.informacion-header h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+}
+
+.informacion-header p {
+  font-size: 1.1em;
+  color: #34495e;
+}
+
+/* Content */
+.informacion-content {
+  margin-top: 40px;
+}
+
 .informacion-content h2 {
-  font-size: 2em;
-  margin-bottom: 15px;
+  font-size: 1.8em;
+  color: #2c3e50;
 }
 
-.informacion-header p,
 .informacion-content p {
   font-size: 1.2em;
+  color: #555;
+  line-height: 1.6;
 }
 
-/* Botón de contacto */
+/* Footer */
+.informacion-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.informacion-footer p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
 .contact-btn {
-  background-color: #007bff;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  background-color: #2980b9;
   color: #fff;
-  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  transition: background-color 0.3s;
 }
 
 .contact-btn:hover {
-  background-color: #0056b3;
+  background-color: #3498db;
 }
+
 
 /* Responsividad */
 @media (max-width: 768px) {
@@ -194,7 +266,7 @@ h1 {
 
 /* Estilos para el acordeón */
 .accordion-btn {
-  background-color: #2980b9;
+  background-color: #003F97;
   color: white;
   padding: 10px;
   width: 100%;
@@ -208,8 +280,23 @@ h1 {
   transition: background-color 0.3s;
 }
 
+/* Contenido */
+.content-container {
+  margin-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .accordion-btn:hover {
-  background-color: #3498db;
+  background-color: #003F97;
 }
 
 .panel {
@@ -256,4 +343,50 @@ h1 {
     width: 95%;
     padding: 15px;
   }
+}
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    width: 80px;
+  }
+
+  .navbar-links {
+    gap: 10px;
+  }
+
+  .card-header {
+    padding: 15px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .detail-group {
+    padding: 12px;
+  }
+}
+
+/* Estados de focus para accesibilidad */
+.card-header:focus,
+.accordion-btn:focus,
+.control-btn:focus,
+.contact-btn:focus {
+  outline: 2px solid #003f97;
+  outline-offset: 2px;
+}
+
+/* Animaciones adicionales */
+.card {
+  transform: translateY(0);
+}
+
+.card:active {
+  transform: translateY(1px);
 }
